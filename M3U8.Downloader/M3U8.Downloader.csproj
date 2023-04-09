@@ -7,4 +7,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Goblinfactory.Konsole" Version="6.2.2" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="7.0.0" />
+    </ItemGroup>
+
 </Project>

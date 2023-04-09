@@ -1,3 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using M3U8.Downloader;
+using Microsoft.Extensions.Configuration;
 
-Console.WriteLine("Hello, World!");
+var builder = new ConfigurationBuilder();
+builder.AddCommandLine(args);
+
+var config = builder.Build();
+
+string? url = config["url"];
+string? outpath = config["out"];
+
+Bootstrapper bootstrapper = new Bootstrapper();
+await bootstrapper.RunAsync(url, outpath, Sources.MasterAsync);
