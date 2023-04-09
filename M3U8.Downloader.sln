@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M3U8.Downloader", "M3U8.Downloader\M3U8.Downloader.csproj", "{CA3FDA42-C726-4078-89E8-DE79D91EE68A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA3FDA42-C726-4078-89E8-DE79D91EE68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3FDA42-C726-4078-89E8-DE79D91EE68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3FDA42-C726-4078-89E8-DE79D91EE68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3FDA42-C726-4078-89E8-DE79D91EE68A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
