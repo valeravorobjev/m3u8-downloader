@@ -2,8 +2,18 @@ using Konsole;
 
 namespace M3U8.Downloader;
 
+/// <summary>
+/// Incapsulate all program logic: get video parts, download video segments, merge and save
+/// to output file
+/// </summary>
 public class Bootstrapper
 {
+    /// <summary>
+    /// Run download video
+    /// </summary>
+    /// <param name="inurl">In url with video data</param>
+    /// <param name="outpath">Output file (path with name)</param>
+    /// <param name="sourceAsync">Function for loading source.</param>
     public async Task RunAsync(string? inurl, string? outpath,
         Func<string, Task<IList<string>>> sourceAsync)
     {
