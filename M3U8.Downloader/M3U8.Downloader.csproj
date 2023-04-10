@@ -5,11 +5,39 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>1.0.0</Version>
+        <PackageIcon>logo.png</PackageIcon>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Title>M3U8.Downloader</Title>
+        <Authors>Vorobjev Valery</Authors>
+        <Description>M3U8.Downloader - download m3u8 video files.
+Using: m3u8downloader https://somehost.com/video myvideo
+If OK, app will create file myvideo.ts</Description>
+        <PackageProjectUrl>https://github.com/valeravorobjev/m3u8-downloader</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/valeravorobjev/m3u8-downloader</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageTags>.net, .net core, C#, m3u8, downloader</PackageTags>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>m3u8downloader</ToolCommandName>
+        <PackageId>m3u8-downloader</PackageId>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Goblinfactory.Konsole" Version="6.2.2" />
-      <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="7.0.0" />
+        <PackageReference Include="Goblinfactory.Konsole" Version="6.2.2" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\logo.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+        <Link>logo.png</Link>
+      </None>
     </ItemGroup>
 
 </Project>

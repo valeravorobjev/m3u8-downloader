@@ -2,10 +2,31 @@ name: build-and-deploy
 run-name: ${{ github.actor }}
 on: 
   push:
+    tags:
+      - *
     branches:
       - main
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
+        
     steps:
-      - run: echo "Hello"
+      - uses: actions/checkout@v3
+        
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+          
+      - name: Install dependencies
+        run: dotnet restore
+      
+      - name: Build
+        run: dotnet build --no-restore --configuration Release 
+        
+      - name: Pack
+        run: dotnet pack --no-restore --no-build --configuration Release
+      
+      - name: Publish to Nuget
+        run: echo ${{github.ref_name}} ${{secrets.NUGET_PUBLISH_KEY}}
+#        run: dotnet nuget push bin/Release/m3u8-downloader.1.0.0.nupkg -k ${{secrets.NUGET_PUBLISH_KEY}}
