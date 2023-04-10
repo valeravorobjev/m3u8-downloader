@@ -1,3 +1,9 @@
+# M3U8 Downloader (v1.0.2)
+
+## Docs
+
+* Add nuget readme
+
 # M3U8 Downloader (v1.0.1)
 
 ## Bug fix
