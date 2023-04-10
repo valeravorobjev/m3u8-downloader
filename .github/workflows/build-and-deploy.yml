@@ -26,5 +26,4 @@ jobs:
         run: dotnet pack --no-restore --no-build --configuration Release
       
       - name: Publish to Nuget
-        run: echo ${{github.ref_name}} ${{secrets.NUGET_PUBLISH_KEY}}
-#        run: dotnet nuget push bin/Release/m3u8-downloader.1.0.0.nupkg -k ${{secrets.NUGET_PUBLISH_KEY}}
+        run: dotnet nuget push bin/Release/m3u8-downloader.${{github.ref_name}}.nupkg -k ${{secrets.NUGET_PUBLISH_KEY}}
