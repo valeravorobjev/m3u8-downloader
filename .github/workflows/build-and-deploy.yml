@@ -27,4 +27,6 @@ jobs:
       
       - name: Publish to Nuget
         run: gh release create aaa
+        env:
+          GH_TOKEN: ${{ github.token }}
 #        run: dotnet nuget push bin/Release/m3u8-downloader.${{github.ref_name}}.nupkg -k ${{secrets.NUGET_PUBLISH_KEY}}
