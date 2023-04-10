@@ -1,3 +1,9 @@
+# M3U8 Downloader (v1.0.1)
+
+## Bug fix
+
+* Change icon
+
 # M3U8 Downloader (v1.0.0)
 
 ## New futures
