@@ -11,7 +11,7 @@ public static class Sources
     /// </summary>
     /// <param name="url">Master m3u8 file</param>
     /// <returns></returns>
-    public static async Task<IList<string>> MasterAsync(string url)
+    public static async Task<Dictionary<int, string>> MasterAsync(string url)
     {
         using HttpClient client = new HttpClient();
         string content = await client.GetStringAsync(url);
@@ -22,6 +22,13 @@ public static class Sources
 
         var items = content.Split("\n").Where(c => c.Contains("https")).ToList();
 
-        return items;
+        var videoParts = new Dictionary<int, string>();
+
+        for (int i = 0; i < items.Count; i++)
+        {
+            videoParts.Add(i, items[i]);
+        }
+
+        return videoParts;
     }
 }

@@ -15,5 +15,8 @@ dotnet tool install --global m3u8-downloader --version 1.0.3
 ```shell
 m3u8downloader url=https://videosite.com/video out=myvideo
 ```
+
+![Progress](progress.png "Progress")
+
 If OK, will create new file myvideo.ts.
 
